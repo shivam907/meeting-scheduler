@@ -1,0 +1,18 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.container {
+}
+
+.text {
+  font-size: 40px;
+  margin-top: 400px;
+  margin-left: 780px;
+}
+
+.link {
+  font-size: 20px;
+  margin-left: 750px;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 20px;
+}
