@@ -4,18 +4,6 @@ const path = require("path");
 
 // // Copy
 // clip.writeSync("🦄");
-const MongoClient = require("mongodb").MongoClient;
-const url = "mongodb://localhost:27017/mydb";
-
-MongoClient.connect(url, function (err, db) {
-  if (err) throw err;
-  var dbo = db.db("mydb");
-  dbo.createCollection("urls", function (err, res) {
-    if (err) throw err;
-    console.log("Collection created!");
-    db.close();
-  });
-});
 
 const activeUrls = require("../public/js/activeUrls");
 const routes = express.Router();
@@ -35,16 +23,14 @@ function id() {
 function addLink(code, timeSlot) {
   link[code] = timeSlot;
   links.push(link);
-  MongoClient.connect(url, function (err, db) {
+  fs.writeFile("links.json", JSON.stringify(links), (err) => {
+    // Catch this!
     if (err) throw err;
-    var dbo = db.db("mydb");
-    var myobj = { code: timeSlot };
-    dbo.collection("customers").insertOne(myobj, function (err, res) {
-      if (err) throw err;
-      console.log("1 document inserted");
-      db.close();
-    });
+
+    console.log("Users saved!");
   });
+  activeUrls[code] = timeSlot;
+  console.log(activeUrls);
 }
 routes.get("/admin", (req, res, next) => {
   res.render("admin");
