@@ -20,18 +20,18 @@ function id() {
   return crypto.randomBytes(20).toString("hex");
 }
 
-function addLink(code, timeSlot) {
-  link[code] = timeSlot;
-  links.push(link);
-  fs.writeFile("links.json", JSON.stringify(links), (err) => {
-    // Catch this!
-    if (err) throw err;
+// function addLink(code, timeSlot) {
+//   link[code] = timeSlot;
+//   links.push(link);
+//   fs.writeFile("links.json", JSON.stringify(links), (err) => {
+//     // Catch this!
+//     if (err) throw err;
 
-    console.log("Users saved!");
-  });
-  activeUrls[code] = timeSlot;
-  console.log(activeUrls);
-}
+//     console.log("Users saved!");
+//   });
+//   activeUrls[code] = timeSlot;
+//   console.log(activeUrls);
+// }
 routes.get("/admin", (req, res, next) => {
   res.render("admin");
 });
@@ -41,14 +41,21 @@ routes.post("/create", (req, res, next) => {
   console.log(a);
   let code = id();
   currentUrl = `https://localhost:5000/${code}`;
-  addLink(code, a);
+  link[code] = a;
+  // links.push(link);
+
   return res.redirect("/copy-link");
 });
 
 routes.get("/copy-link", (req, res, next) => {
+  // console.log(links);
   res.render("unique-link", {
     link: currentUrl,
   });
 });
+routes.get(`/${link[0]}`, (req, res, next) => {
+  res.sendFile(`<h1>Your Meeting time is ${link[link[0]]}</h1>`);
+});
 
-module.exports = routes;
+exports.routes = routes;
+exports.links = link;

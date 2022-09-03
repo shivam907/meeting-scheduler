@@ -4,12 +4,21 @@ const bodyParser = require("body-parser");
 
 const public = require("../public/js/publicAccounts.js");
 const admin = require("../public/js/adminAccounts.js");
-const urls = require("../public/js/activeUrls");
+const urls = require("./adminRoutes");
 
 const routes = express.Router();
 
-for (let i in urls) {
-  routes.get(`/${i}`, (req, res, next) => {
-    res.sendFile(`<h1>your meeting time is ${urls[i]}</h1>`);
-  });
-}
+// for (let i in urls.links[0]) {
+//   console.log("stop 1");
+//   routes.get(`/${i}`, (req, res, next) => {
+//     console.log("stop 2");
+//     res.sendFile(`<h1>your meeting time is ${urls[i]}</h1>`);
+//   });
+// }
+
+routes.get("/unique", (req, res) => {
+  console.log("Hello");
+  console.log(urls.links);
+});
+
+module.exports = routes;
