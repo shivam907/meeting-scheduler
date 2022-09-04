@@ -21,4 +21,8 @@ app.use(adminRoutes.routes);
 app.use(publicRoutes);
 app.use(linkRoutes);
 
+app.use("*", (req, res, next) => {
+  res.render("404");
+});
+
 app.listen(port);
