@@ -9,10 +9,15 @@
   margin-top: 400px;
   margin-left: 780px;
 }
+.text1 {
+  font-size: 40px;
+  margin-top: 400px;
+  margin-left: -90px;
+}
 
 .link {
   font-size: 20px;
-  margin-left: 750px;
+  margin-left: 850px;
   font-family: "Times New Roman", Times, serif;
   margin-top: 20px;
 }

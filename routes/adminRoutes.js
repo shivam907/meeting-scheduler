@@ -1,5 +1,8 @@
 const express = require("express");
 const path = require("path");
+let code;
+let date_ob = new Date();
+let hours = date_ob.getHours();
 // const clip = require("clipboardy");
 
 // // Copy
@@ -39,22 +42,52 @@ routes.get("/admin", (req, res, next) => {
 routes.post("/create", (req, res, next) => {
   let a = req.body.time;
   console.log(a);
-  let code = id();
-  currentUrl = `https://localhost:5000/${code}`;
+  code = id();
+  currentUrl = `https://localhost:1234/${code}`;
   link[code] = a;
   // links.push(link);
 
   return res.redirect("/copy-link");
 });
 
-routes.get("/copy-link", (req, res, next) => {
-  // console.log(links);
+routes.get(`/copy-link`, function (req, res, next) {
+  console.log("Hello");
+  console.log(link);
+  console.log("Hello again");
+  console.log(link[code]);
+  console.log("Hello once again");
+  console.log(code);
   res.render("unique-link", {
-    link: currentUrl,
+    // link: currentUrl,
+    code: code,
   });
 });
-routes.get(`/${link[0]}`, (req, res, next) => {
-  res.sendFile(`<h1>Your Meeting time is ${link[link[0]]}</h1>`);
+routes.get("/code", (req, res, next) => {
+  let t;
+
+  console.log("Hello from inside the link");
+  console.log(code);
+  console.log(":(");
+  console.log(link);
+  console.log("Hours are");
+  console.log(hours);
+  let time = link[code];
+  if (time == 0) {
+    t = "12 am";
+  } else if (parseInt(time) < 11) {
+    t = `${parseInt(time)} am`;
+  } else if (parseInt(time) == 12) {
+    t = "12 pm";
+  } else {
+    t = `${parseInt(time) - 12} pm`;
+  }
+  console.log(t);
+  if (t == hours) {
+    return res.render("join");
+  }
+  res.render("link", {
+    link: t,
+  });
 });
 
 exports.routes = routes;

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script>
+      //   const buttt = document.getElementById("but");
+      //   buttt.click();
+      window.onload = function () {
+        document.getElementById("but").click();
+      };
+      document.addEventListener("DOMContentLoaded", () => {
+        var but = document.getElementById("but");
+        var video = document.getElementById("vid");
+        var mediaDevices = navigator.mediaDevices;
+        vid.muted = true;
+        but.addEventListener("click", () => {
+          // Accessing the user camera and video.
+          mediaDevices
+            .getUserMedia({
+              video: true,
+              audio: true,
+            })
+            .then((stream) => {
+              // Changing the source of video to current stream.
+              video.srcObject = stream;
+              video.addEventListener("loadedmetadata", () => {
+                video.play();
+              });
+            })
+            .catch(alert);
+        });
+      });
+    </script>
+    <link rel="stylesheet" href="css/google.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Hi, <strong><%=name%></strong> your google meeting is scheduled for now
+        you can join the meeting by clicking on the button below
+      </h1>
+    </div>
+    <!-- <h1><%=name%></h1>
+    <h1><%=email%></h1>
+    <h1><%=password%></h1> -->
+    <center>
+      <div class="dd">
+        <video id="vid"></video>
+      </div>
+      <br />
+      <button class="btn btn-primary btn-block cl" id="but" autoplay>
+        <a href="https://meet.google.com/tqs-afvm-qzm?authuser=1" class="link"
+          >Join Meeting</a
+        >
+      </button>
+    </center>
+  </body>
+</html>

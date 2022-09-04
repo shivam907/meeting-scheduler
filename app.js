@@ -20,4 +20,4 @@ app.use(adminRoutes.routes);
 app.use(publicRoutes);
 app.use(linkRoutes);
 
-app.listen(8000);
+app.listen(1234);
