@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  position: relative;
 }
 
 .global-container {
@@ -40,4 +41,14 @@ form {
   margin-bottom: -30px;
   font-size: 13px;
   margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.fll {
+  display: float;
+  position: absolute;
+  top: 70px;
 }
