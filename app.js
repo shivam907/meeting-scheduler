@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const link = {};
+const port = process.env.PORT || 5000;
 const app = express();
 
 app.set("view engine", "ejs");
@@ -20,4 +21,4 @@ app.use(adminRoutes.routes);
 app.use(publicRoutes);
 app.use(linkRoutes);
 
-app.listen(1234);
+app.listen(port);

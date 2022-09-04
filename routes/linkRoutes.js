@@ -17,8 +17,8 @@ const routes = express.Router();
 // }
 
 routes.get("/unique", (req, res) => {
-  console.log("Hello");
-  console.log(urls.links);
+  // console.log("Hello");
+  // console.log(urls.links);
 });
 
 module.exports = routes;

@@ -41,7 +41,7 @@ routes.get("/admin", (req, res, next) => {
 
 routes.post("/create", (req, res, next) => {
   let a = req.body.time;
-  console.log(a);
+  // console.log(a);
   code = id();
   currentUrl = `https://localhost:1234/${code}`;
   link[code] = a;
@@ -51,12 +51,12 @@ routes.post("/create", (req, res, next) => {
 });
 
 routes.get(`/copy-link`, function (req, res, next) {
-  console.log("Hello");
-  console.log(link);
-  console.log("Hello again");
-  console.log(link[code]);
-  console.log("Hello once again");
-  console.log(code);
+  // console.log("Hello");
+  // console.log(link);
+  // console.log("Hello again");
+  // console.log(link[code]);
+  // console.log("Hello once again");
+  // console.log(code);
   res.render("unique-link", {
     // link: currentUrl,
     code: code,
@@ -65,12 +65,12 @@ routes.get(`/copy-link`, function (req, res, next) {
 routes.get("/code", (req, res, next) => {
   let t;
 
-  console.log("Hello from inside the link");
-  console.log(code);
-  console.log(":(");
-  console.log(link);
-  console.log("Hours are");
-  console.log(hours);
+  // console.log("Hello from inside the link");
+  // console.log(code);
+  // console.log(":(");
+  // console.log(link);
+  // console.log("Hours are");
+  // console.log(hours);
   let time = link[code];
   if (time == 0) {
     t = "12 am";

@@ -17,11 +17,16 @@
     <div class="global-container">
       <div class="card login-form">
         <div class="card-body">
-          <h3 class="card-title text-center">Log in to Schedule IT</h3>
+          <h3 class="card-title text-center">Log in to Schedule.it</h3>
           <div class="card-text">
             <!--
 			<div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
-            <form action="/check-public" method="POST">
+            <form
+              name="userLogin"
+              action="/check-public"
+              method="POST"
+              onsubmit="return validatorEmptySpace()"
+            >
               <!-- to error: add class "has-danger" -->
               <div class="form-group">
                 <label for="username">Username</label>
@@ -29,8 +34,9 @@
                   type="text"
                   name="username"
                   class="form-control form-control-sm"
-                  id="exampleInputEmail1"
+                  id="email"
                   aria-describedby="emailHelp"
+                  required
                 />
               </div>
               <div class="form-group">
@@ -43,6 +49,7 @@
                   name="password"
                   class="form-control form-control-sm"
                   id="exampleInputPassword1"
+                  required
                 />
               </div>
               <button type="submit" class="btn btn-primary btn-block">

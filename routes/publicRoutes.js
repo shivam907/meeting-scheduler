@@ -28,8 +28,8 @@ routes.get("/public", (req, res, next) => {
 
 routes.post("/schedule", (req, res, next) => {
   url = req.body.link;
-  console.log("schedule");
-  console.log(url.length);
+  // console.log("schedule");
+  // console.log(url.length);
   if (url.length == 40) {
     return res.redirect("/join");
   } else {
