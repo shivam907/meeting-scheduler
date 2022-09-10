@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: sans-serif;
+      }
+      #nav-bar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+      .navbar {
+        background-image: linear-gradient(to right, #99badd, #00bfff);
+        padding: 0 !important;
+      }
+      .navbar-brand img {
+        height: 40px;
+        padding-left: 20px;
+      }
+      .navbar-nav li {
+        padding: 0 10px;
+      }
+      .navbar-nav li a {
+        color: #fff !important;
+        font-weight: 600;
+        float: right;
+        text-align: left;
+      }
+      .fa-bars {
+        color: #fff !important;
+      }
+      .navbar-toggler {
+        outline: none !important;
+      }
+      #banner {
+        background-image: linear-gradient(to right, #99badd, #00bfff);
+        color: #fff;
+        padding-top: 5%;
+      }
+      .title {
+        padding-top: 0;
+        font-size: 50px;
+        font-weight: 600;
+      }
+      .play-btn {
+        width: 45px;
+        margin: 20px;
+      }
+      #banner a {
+        color: #fff;
+        text-decoration: none;
+        height: 1000px;
+      }
+      #im {
+        border-radius: 50%;
+      }
+      .par {
+        font-size: 20px;
+        padding-bottom: 30px;
+      }
+      #features {
+        padding: px, 0;
+      }
+      .im1 {
+        padding-top: 100px;
+        padding-left: 80px;
+      }
+      .heading {
+        padding-left: 250px;
+        padding-top: 50px;
+        font-weight: 600;
+      }
+      .desc {
+        padding-top: 30px;
+        font-size: large;
+        font-family: serif;
+        padding-bottom: 50px;
+      }
+      .foot {
+        width: 100%;
+        height: 400px;
+        background-color: aliceblue;
+      }
+      .contact {
+        padding-left: 650px;
+        padding-top: 50px;
+      }
+      .para1 {
+        padding-left: 450px;
+      }
+      .copy {
+        width: 100%;
+        padding-top: 30px;
+        padding-left: 100px;
+        text-align: center;
+        color: darkslategray;
+      }
+      #abouthead {
+        color: blueviolet;
+        padding-top: 30px;
+        padding-left: 500px;
+      }
+    </style>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css"
+      integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="E:\meetings\style.css" />
+  </head>
+
+  <body>
+    <section id="nav-bar">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZGF0YS1uYW1lPSJMYXllciAxIiBpZD0iTGF5ZXJfMSIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik01MDQuMzMsNDQ5Yy0xLjc3LTYuOC00NC43My0xNjcuNTItMTY0LjIxLTIzMi45MS00NC42NS0yNC40My05Ni4yLTQxLjQ1LTE0Ni01Ny45MUMxMTUsMTMyLjA4LDQwLjI5LDEwNy40MiwyNiw1OS42NWE2LjIyLDYuMjIsMCwwLDAtMTIsLjI0Yy0uOSwzLjUtMjEuNTMsODYuMzgsMTUuNjUsMTM3Ljk0LDE2LjgsMjMuMjksNDIuNjYsMzYuMzMsNzYuODUsMzguNzUsMi44OC4yLDUuNjEuNDIsOC40NC42Myw0LjE1LDE1LjE2LDIyLjE0LDYwLjYzLDg5LjYxLDY2LDEyLjI1LDEsMjQuMTcsMi4yNSwzNS45LDMuNjUsNC45MiwxNC4xNiwyNi44NCw1Ny42LDExNCw3My4wNyw2Mi43OCwxMS4xNCwxMTQsMzEuMTgsMTMxLjIxLDUxLjI1LDQuMzksMTIuNjgsNi41MywyMC42Miw2LjYzLDIxYTYuMiw2LjIsMCwwLDAsNiw0LjY1LDYuNTYsNi41NiwwLDAsMCwxLjU3LS4yQTYuMjMsNi4yMywwLDAsMCw1MDQuMzMsNDQ5Wk0zOS43NCwxOTAuNThDMTYsMTU3LjczLDE4Ljc1LDEwOC41MiwyMi41NSw4MS44M2MyNi4wNyw0MS40Myw5Mi4zNCw2My4zMSwxNjcuNjIsODguMTYsNDkuMzIsMTYuMjksMTAwLjMzLDMzLjEzLDE0NCw1NywzMS40NiwxNy4yMSw1Ny41Myw0MS44LDc4LjgsNjguNDRDMzcyLDI2OS4zOCwzMDUuNTgsMjM4LjIyLDEwNy4zNSwyMjQuMTgsNzcsMjIyLDU0LjI4LDIxMC43MywzOS43NCwxOTAuNThabTg4LjM2LDQ3LjY0YzIwMi4zOCwxNi40MiwyNTQuMzYsNTEuNDYsMjkyLjY0LDc3LjI4LDQuMzYsMi45NSw4LjU4LDUuOCwxMi44NCw4LjUxLDUuMDksNy43Nyw5LjgxLDE1LjU1LDE0LjE4LDIzLjIyLTM4LjM3LTE5Ljc4LTExNS42OS00MS40Mi0yMDEuMTktNTIuMTUtLjE0LDAtLjI5LDAtLjQ0LS4wNi0xMy4zOS0xLjY3LTI2Ljk0LTMuMTMtNDAuNjEtNC4yMkMxNTAuNDksMjg2LjQzLDEzMy4yMSwyNTMuNTMsMTI4LjEsMjM4LjIyWk0zNTYuNjMsMzY3LjY4Yy03MC44My0xMi41Ny05NC41MS00My43OS0xMDItNTkuMTEsMTEwLjI0LDE0Ljg3LDE5Mi43Nyw0Ni4yNywyMDUuNjEsNjIsNi43NSwxMy41NSwxMi4yOSwyNi4yNSwxNi44MSwzNy41QzQ1MS4xLDM5MS40OSw0MDcuOTQsMzc2Ljc4LDM1Ni42MywzNjcuNjhaIi8+PC9zdmc+"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about-us">ABOUT Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/">Sign In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Profile</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-----------------banner-->
+    <section id="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="title">We create.You Enjoy</p>
+
+            <p class="par">
+              You'll love it for the advanced features to keep you in cintrol of
+              your calender.They'll love it for the personalised scheduling
+              experience.
+            </p>
+            <a href="/public"
+              ><button class="btn btn-outline-light btn-lg" id="sbutton">
+                Schedule Meeting
+              </button></a
+            >
+          </div>
+          <div class="col-md-6 text-right">
+            <img src="img/meeting.jpg" class="img-fluid" id="im" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------features-->
+    <section id="features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="heading">
+              Stay Productive. Let Schedule It do your work
+            </h1>
+          </div>
+          <div class="col-md-4 features">
+            <img src="img/time.png" class="im1" />
+            <pre class="desc">
+Schedule it will send reminders
+   prior to the meeting.</pre
+            >
+          </div>
+          <div class="col-md-4 features">
+            <img src="img/calender.png" class="im1" />
+            <pre class="desc">
+Schedule It creates a calendar 
+  event for you automatically.</pre
+            >
+          </div>
+          <div class="col-md-4 features">
+            <img src="img/invites.png" class="im1" />
+            <pre class="desc">
+Schedule It also sends out meeting 
+    invites to everyone.</pre
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--------------------contact us-->
+    <section id="contact Us">
+      <div class="foot">
+        <h2 class="contact">Contact Us</h2>
+        <p class="para1">
+          Questions, bug reports, feedbacks,feature requests- we are here for it
+          all.
+        </p>
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <form>
+              <div class="form-group">
+                <label for="">First Name</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="">Last Name</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="">How may we help you?</label>
+                <input type="text-area" class="form-control" />
+              </div>
+              <div class="form-group">
+                <button class="btn">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <p class="copy">
+          Copyrights <span>&copy;</span> 2022.All rights reserved.
+        </p>
+      </div>
+    </section>
+    <!-------------------------footer-->
+  </body>
+</html>
