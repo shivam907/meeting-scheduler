@@ -3,6 +3,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const link = {};
 const port = process.env.PORT || 5900;
+
 const app = express();
 
 app.set("view engine", "ejs");
@@ -25,6 +26,9 @@ app.use(abcuRoutes);
 app.get("/home", (req, res, next) => {
   res.render("create");
 });
+app.get("/contact-us", (req,res,next)=>{
+  res.render("contact");
+})
 
 app.use("*", (req, res, next) => {
   res.render("404");
