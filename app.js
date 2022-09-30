@@ -23,12 +23,12 @@ app.use(adminRoutes.routes);
 app.use(publicRoutes);
 app.use(linkRoutes);
 app.use(abcuRoutes);
-app.get("/home", (req, res, next) => {
-  res.render("create");
-});
-app.get("/contact-us", (req,res,next)=>{
+// app.get("/home", (req, res, next) => {
+//   res.render("create");
+// });
+app.get("/contact-us", (req, res, next) => {
   res.render("contact");
-})
+});
 
 app.use("*", (req, res, next) => {
   res.render("404");
